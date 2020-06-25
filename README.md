@@ -1,6 +1,6 @@
 # Search user interface based on Openplatform v3
 
-Full disclaimer: I am a rookie playing at programming and learning as I go ...
+Full disclaimer: I am a rookie playing at programming and learning from my errors as I go along ...
 
 This project is created with a Python3 backend and ReactJS / NextJS frontend and deployed using the Vercel cloud platform for static sites and Serverless Functions.
 
