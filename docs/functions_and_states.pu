@@ -1,0 +1,35 @@
+@startuml
+
+autonumber
+
+title "Functions and states - Sequence Diagram"
+
+actor Patron as patron
+boundary "Searchfield form" as searchfield
+entity userSearchRequest
+entity queryString
+entity useOpenPlatformSearch
+entity fetchBookList
+entity searchResult
+entity loading
+boundary "Openplatform /search" as openplatform
+
+patron -> searchResult: Open.
+searchResult -> loading: 
+loading -> searchResult: "Enter your search query in the search field ...".
+patron -> searchfield: Enter search query.
+searchfield -> userSearchRequest: onChange \n set**userSearchRequest** to \n (e.target.value).
+userSearchRequest -> queryString: onSubmit \n set**queryString** to \n userSearchRequest.
+queryString -> useOpenPlatformSearch: Call **useOpenPlatformSearch** with \n queryString]
+useOpenPlatformSearch -> useOpenPlatformSearch: Check for valid CQL.
+useOpenPlatformSearch -> fetchBookList: Call **fetchBookList** with \n queryString (validCql).
+fetchBookList -> openplatform: Fetch response with \n queryString (validCql).
+fetchBookList <-- openplatform: Return JSON response.
+fetchBookList -> searchResult: set**searchResult** \n to JSON.data.
+fetchBookList -> loading: set**loading** \n to true.
+fetchBookList -> searchResult: Return searchResult and loading values.
+searchResult -> loading: Loading?
+loading -> searchResult: True!
+searchResult -> patron: Display search result.
+
+@enduml
