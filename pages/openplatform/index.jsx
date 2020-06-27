@@ -53,7 +53,7 @@ function SearchResult() {
         <input className="shadow appearance-none border border-grey-500 rounded w-5/6 py-3 px-3 text-gray-700 mb-1 focus:outline-none focus:shadow-outline" type="search" placeholder="Search for title, author or subject ..." id="searchquery" name="searchquery" autoFocus onChange={e => setUserSearchRequest(e.target.value)} />
         <button className="ml-3 bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit">Search</button>
       </form>
-      <details className="clear-both">
+      <details>
         <summary>Liste med states:</summary>
         <ul>
           <li>userSearchRequest: {userSearchRequest}</li>

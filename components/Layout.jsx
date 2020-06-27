@@ -4,14 +4,15 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function Layout({ children }) {
-  return <html lang="en" className="text-gray-900 leading-tight bg-blue-100">
-    <Head className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+  return <html lang="da">
+    <Head>
       <title> Alpha Folkebiblioteket</title>
-      <link rel="icon" href="../public/images/favicon/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       <meta charSet='UTF-8' />
     </Head>
-    <body className="container mx-auto p-4 clear-both">
+    <body>
       <Header />
       <div>{children}</div>
       <Footer />
