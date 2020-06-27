@@ -11,15 +11,15 @@ const Header = () => (
               <h1 className="text-4xl font-bold text-black float-left px-4">Alpha Folkebiblioteket</h1>
             </a>
           </Link>
-          <ul className="flex float-right mx-4">
+          <ul className="flex float-right mx-4 list-none">
             <li className="flex mx-2 my-4">
               <Link href="/opensearch/marcxchange">
-                <a className="border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white">Opensearch API (marcXchange)</a>
+                <a className="border border-blue-500 rounded py-1 px-3 text-black">Opensearch API (marcXchange)</a>
               </Link>
             </li>
             <li className="flex mx-2 my-4">
               <Link href="/openplatform">
-                <a className="border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white">Openplatform API</a>
+                <a className="border border-blue-500 rounded py-1 px-3 text-black">Openplatform API</a>
               </Link>
             </li>
           </ul>

@@ -46,18 +46,18 @@ function SearchResult() {
   return (
     <Layout>
       <form 
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="flex w-full px-4"
         onSubmit={e => {
           e.preventDefault();
           setQueryString(userSearchRequest);
         }}
         >
-        <input className="shadow appearance-none border border-grey-750 rounded w-5/6 py-3 px-3 text-gray-700 mb-1 focus:outline-none focus:shadow-outline" 
+        <input className="flex w-11/12 shadow border border-blue-300 rounded py-3 px-3 text-gray-700 mb-1 focus:outline-none focus:shadow-outline" 
         type="search" autoComplete="on" placeholder="Search for title, author or subject ..." id="searchquery" name="searchquery" autoFocus onChange={e => setUserSearchRequest(e.target.value)} />
-        <button className="ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit">Search</button>
+        <button className="flex w-auto ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-full" type="submit">Search</button>
       </form>
       {loading === "false" ? (
-        <p>Enter your search query in the search field ...</p>
+        <p className="border-solid border-black border-2 p-4 m-4 text-center">Enter your search query in the search field ...</p>
       ) : loading === "null" ? (
          <div>
           <p>No materials matched your search query ...</p>   
