@@ -54,7 +54,7 @@ function SearchResult() {
           <button className="flex w-auto ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-full" type="submit">Search</button>
       </form>
       <details className="px-4">
-        <summary className="">Liste med states:</summary>
+        <summary className="">ReactJS states:</summary>
         <ul className="">
           <li className="">userSearchRequest: {userSearchRequest}</li>
           <li>queryString: {queryString}</li>
