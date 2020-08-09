@@ -17,11 +17,6 @@ const Header = () => (
                 <a className="border border-blue-500 rounded py-1 px-3 text-black">Opensearch API (marcXchange)</a>
               </Link>
             </li>
-            <li className="flex mx-2 my-4">
-              <Link href="/openplatform">
-                <a className="border border-blue-500 rounded py-1 px-3 text-black">Openplatform API</a>
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>

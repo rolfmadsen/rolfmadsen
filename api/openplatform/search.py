@@ -20,7 +20,7 @@ def get_query_string():
     parameters = {
         "q": search_query,
         "access_token": ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT,
-        "fields": ["title", "pid", "creator", "abstract", "titleSeries", "type", "identifierUPC"],
+        "fields": ["title", "pid", "creator", "date", "abstract", "titleSeries", "type", "identifierUPC", "workType"],
         "pretty": "true",
         "timings": "true",
         "offset": "0",

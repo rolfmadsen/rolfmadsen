@@ -57,7 +57,9 @@ function SearchResult() {
         <button className="flex w-auto ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-full" type="submit">Search</button>
       </form>
       {loading === "false" ? (
-        <p className="border-solid border-black border-2 p-4 m-4 text-center">Enter your search query in the search field ...</p>
+          <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-5 my-5">
+            <p className="block">When you perform a search this page will display a JSON response from the Opensearch service in the marcXchange format.</p>
+          </div>
       ) : loading === "null" ? (
          <div>
           <p>No materials matched your search query ...</p>   
