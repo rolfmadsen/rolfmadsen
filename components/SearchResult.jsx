@@ -49,8 +49,8 @@ function SearchResult() {
           setQueryString(userSearchRequest);
         }}
       >
-          <input className="flex w-11/12 shadow border border-blue-300 rounded py-3 px-3 text-gray-700 mb-1 focus:outline-none focus:shadow-outline" type="search" placeholder="Search for title, author or subject ..." id="searchquery" name="searchquery" autoFocus onChange={e => setUserSearchRequest(e.target.value)} />
-          <button className="flex w-auto ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-full" type="submit">Search</button>
+          <input className="flex w-11/12 border-solid border-2 border-gray-600 rounded py-3 px-3 text-gray-700 mb-1 focus:outline-none focus:shadow-outline" type="search" placeholder="Search for title, author or subject ..." id="searchquery" name="searchquery" autoFocus onChange={e => setUserSearchRequest(e.target.value)} />
+          <button className="ml-4 bg-green-600 hover:bg-green-400 text-white rounded-full py-2 px-6 font-semibold" type="submit">Search</button>
       </form>
       
       {loading === "false" ? (
@@ -67,8 +67,8 @@ function SearchResult() {
           const orderBibliotekdkLink = "https://bibliotek.dk/da/reservation?ids=" + workCollection.pid + "&subtype_order_ids= + workCollection.pid";
           // https://bibliotek.dk/linkme.php?rec.id=870970-basis%3A29750947
           // https://bibliotek.dk/da/reservation?ids=870970-basis%3A29750947&subtype_order_ids=870970-basis%3A29750947
-          return <article id="workCollection" className="border-solid border-black border-1 my-1">
-            <div id="workCollection_header" className="p-4 shadow rounded bg-white">
+          return <article id="workCollection" className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
+            <div id="workCollection_header" className="p-4 rounded bg-white">
               {workCollection.title ? 
                 <span title="Title">
                   <strong>
@@ -99,11 +99,11 @@ function SearchResult() {
             </div>
             <div id="workCollection_abstract">
               {workCollection.abstract ?
-                <span className="px-4" title ="abstract">{workCollection.abstract} </span> : ""
+                <span className="px-4 pb-4 inline-block" title ="abstract">{workCollection.abstract} </span> : ""
               }
             </div>             
-            <div id="workCollection_order" className="py-4">
-              <a href={orderBibliotekdkLink}><button className="ml-3 bg-orange-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="button" title={`Order the ${workCollection.workType} with PID ${workCollection.pid} at Bibliotek.dk`}>Order</button> </a>
+            <div id="workCollection_order" className="pb-4">
+              <a href={orderBibliotekdkLink}><button className="ml-3 bg-green-600 hover:bg-green-400 text-white font-bold py-2 px-4 rounded-lg" id="button" title={`Order the ${workCollection.workType} with PID ${workCollection.pid} at Bibliotek.dk`}>Order</button> </a>
             </div>
           </article>;
         })

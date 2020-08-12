@@ -4,13 +4,14 @@ import Link from 'next/link'
 const Header = () => (
   <>
     <header>
-      <div>
         <nav className="clear-both">
-          <Link href="/">
-            <a>
-              <h1 className="text-4xl font-bold text-black float-left px-4">Alpha Folkebiblioteket</h1>
-            </a>
-          </Link>
+          <div className="bg-green-600">
+            <Link href="/">
+              <a>
+                <h1 className="text-4xl font-bold text-black float-left px-4">Alpha Folkebiblioteket</h1>
+              </a>
+            </Link>
+          </div>
           <ul className="flex float-right mx-4 list-none">
             <li className="flex mx-2 my-4">
               <Link href="/opensearch/marcxchange">
@@ -19,7 +20,6 @@ const Header = () => (
             </li>
           </ul>
         </nav>
-      </div>
     </header>
   </>
 );
