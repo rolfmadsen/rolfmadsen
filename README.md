@@ -4,11 +4,11 @@ Full disclaimer: I am a rookie playing at programming and learning from my error
 
 This project is created with a Python3 backend and ReactJS / NextJS frontend and deployed using the Vercel cloud platform for static sites and Serverless Functions.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/rolfmadsen/search)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/rolfmadsen/rolfmadsen)
 
 Search functions are dependent on the Openplatform API and a valid access token.
 
-To add an access token go to https://vercel.com/[INSERT-USER-NAME]/search/settings. Add an environment variable named "ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT" for both Production and  Development, and set the value to a valid access token from the Access platform. 
+To add an access token go to https://vercel.com/rolfmadsen/[INSERT-USER-NAME]/settings/environment-variables. Add an environment variable named "ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT" for both Production and  Development, and set the value to a valid access token from the Access platform. 
 
 See the section "Tokens" under https://openplatform.dbc.dk/v3/ for details on how to get an access token.
 
@@ -22,7 +22,9 @@ Example: https://rolfmadsen.now.sh/
 
 ## Github
 
-If you clone this repository and setup a local development environment you can use the Vercel CLI to retrieve your environment variables using the "vercel env" command.
+If you clone this repository and setup a local development environment you can use the Vercel CLI to retrieve your environment variables using the "vercel env pull" command.
+
+N.B. If you encounter the error message: "Error! The specified token is not valid" try "vercel logout" and "vercel login".
 
 Install Vercel CLI:
 1. $ npm i -g vercel
