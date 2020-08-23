@@ -23,8 +23,9 @@ def get_query_string():
         "fields": ["title", "pid", "creator", "date", "abstract", "titleSeries", "type", "identifierUPC", "workType"],
         "pretty": "true",
         "timings": "true",
-        "offset": "0",
-        "limit": "50"
+        "sort": "rank_frequency",
+        "offset": "1",
+        "limit": "10"
     }
 
     # https://openplatform.dbc.dk/v3/search?fields=pid,title,creator,abstract,titleSeries,type,identifierUPC&access_token={ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT}&pretty=true&timings=true&q={search_query}&offset=0&limit=50

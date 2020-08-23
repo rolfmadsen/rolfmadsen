@@ -107,10 +107,10 @@ function SearchResult() {
           </article>;
         })
       )}
-      <details className="px-4 float-right">
-        <summary className="">ReactJS states:</summary>
-        <ul className="">
-          <li className="">userSearchRequest: {userSearchRequest}</li>
+      <details className="px-4">
+        <summary>ReactJS states:</summary>
+        <ul>
+          <li>userSearchRequest: {userSearchRequest}</li>
           <li>queryString: {queryString}</li>
           <li>loading: {loading}</li>
         </ul>
