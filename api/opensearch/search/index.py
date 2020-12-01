@@ -29,7 +29,7 @@ def getsearchresult(search_query, objectFormat):
 
     endpoint = 'https://opensearch.addi.dk/test_5.2/?'
     
-    # https://oss-services.dbc.dk/opensearch/5.2/?action=search&query=%22peter%22&agency=100200&profile=test&start=1&stepValue=10&outputType=json&objectFormat=marcxchange
+    # https://opensearch.addi.dk/test_5.2/?action=search&query=%22peter%22&agency=100200&profile=test&start=1&stepValue=10&outputType=json&objectFormat=marcxchange
 
     response = requests.get(
         url=endpoint, 
