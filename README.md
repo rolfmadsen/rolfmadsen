@@ -10,7 +10,7 @@ Search functions are dependent on the Openplatform API and a valid access token.
 
 See the section "Tokens" under https://openplatform.dbc.dk/v3/ for details on how to get an access token.
 
-To add an access token go to https://vercel.com/[INSERT-USER-NAME]/rolfmadsen/settings/environment-variables. Add an environment variable named "ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT" for both Production and  Development, and set the value to a valid access token from the Access platform. 
+To add an access token go to https://vercel.com/[INSERT-USER-NAME]/rolfmadsen/settings/environment-variables. Add an environment variable named "vercel" for both Production and  Development, and set the value to a valid access token from the Access platform. 
 
 ## Vercel (Zeit.co) - Next.JS
 
