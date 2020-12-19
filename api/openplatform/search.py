@@ -12,14 +12,14 @@ app = Flask(__name__)
 
 def get_query_string():
 
-    ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT = os.getenv('ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT', "Missing environment variable")
+    vercel = os.getenv('vercel', "Missing environment variable")
     query = request.args.get('searchquery')
     search_query = "{}".format(query)
 
     endpoint = "https://openplatform.dbc.dk/v3/search?"
     parameters = {
         "q": search_query,
-        "access_token": ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT,
+        "access_token": vercel,
         "fields": ["title", "pid", "creator", "date", "abstract", "titleSeries", "type", "identifierUPC", "workType"],
         "pretty": "true",
         "timings": "true",
@@ -28,7 +28,7 @@ def get_query_string():
         "limit": "10"
     }
 
-    # https://openplatform.dbc.dk/v3/search?fields=pid,title,creator,abstract,titleSeries,type,identifierUPC&access_token={ACCESS_PLATFORM_ACCESS_TOKEN_CLIENT}&pretty=true&timings=true&q={search_query}&offset=0&limit=50
+    # https://openplatform.dbc.dk/v3/search?fields=pid,title,creator,abstract,titleSeries,type,identifierUPC&access_token={vercel}&pretty=true&timings=true&q={search_query}&offset=0&limit=50
     response = requests.get(
         url = endpoint,
         params = parameters,
