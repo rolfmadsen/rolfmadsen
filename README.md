@@ -130,6 +130,23 @@ Use the key "vercel" for both environment variables, and set the value to a vali
 
 The access token kan be retrieved via https://openplatform.dbc.dk/v3/ under the "Tokens" section.
 
+
+### Adding a staging domain for testing changes
+
+First set up Vercel to build a staging site when you push changes to your staging branch in your Github organization:
+1. Open https://vercel.com/[ENTER YOUR ORGANIZATION]/rolfmadsen/settings/domains
+1. Add "staging.[ENTER YOUR DOMAIN].dk"
+1. Add "https://github.com/[ENTER YOUR ORGANIZATION]/rolfmadsen/tree/staging"
+
+Create staging branch
+```console
+  git branch staging
+```
+Shift to staging branch
+```console
+  git checkout staging
+```
+
 ### Commands for pushing code to github:
 
 Stage all changes in the current directory and sub-directories:
@@ -147,7 +164,11 @@ NB. Add specific files by exchanging "." with the "file-name".
 
 See the history of changes to the repository:
 ```console
-  git log
+  git log --all --decorate --oneline --graph
+```
+NB. You can use graph as an alias for the previous "git log" command via:
+```console
+  alias graph="git log --all --decorate --oneline --graph"  
 ```
 
 See the difference between working tree/direcotr and staging area:
@@ -170,6 +191,8 @@ Get updates from remote repository:
 ```console
   git pull
 ```
+
+
 ## Development FAQ
 
 ### How to use GET to submit search query to browser URL
