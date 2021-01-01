@@ -58,8 +58,9 @@ Configure your name:
 
 Configure your e-mail-addresse:
 ```console
-  git config --global user.email "ENTER YOUR E-MAIL-ADDRESSE"
+  git config --global user.email "GITHUB-USERNAME@users.noreply.github.com E-MAIL-ADDRESSE"
 ```
+NB. Find your Github no-reply e-mail-adress under https://github.com/settings/emails. 
 
 See configuration:
 ```console
