@@ -10,7 +10,6 @@ Search functions are dependent on the Openplatform API and a valid access token.
 
 See the section "Tokens" under https://openplatform.dbc.dk/v3/ for details on how to get an access token.
 
-To add an access token go to https://vercel.com/[INSERT-USER-NAME]/rolfmadsen/settings/environment-variables. Add an environment variable named "vercel" for both Production and  Development, and set the value to a valid access token from the Access platform. 
 
 ## Vercel (Zeit.co) - Next.JS
 
@@ -20,29 +19,160 @@ After committing code to Github you can se the build process under https://verce
 
 Example: https://rolfmadsen.dk/
 
+## Ready your Ubuntu
+
+I have installed Ubuntu on a laptop for my local development environment.
+
+### Update nodejs to version 14 due to dependency on this version
+```console
+  curl -sL https;//deb.nodesource.com/setup_14.x | sudo bash -
+```
+
+```console
+  sudo apt -y install nodejs
+```
+
+```console
+  node -v
+```
+
+### Install Git on Ubuntu
+```console
+  sudo apt update
+```
+
+```console
+  sudo apt install git
+```
+
+```console
+  git --version
+```
+
+#### Configure username and e-mail
+
+Configure your name:
+```console
+  git config --global user.name "ENTER YOUR NAME"
+```
+
+Configure your e-mail-addresse:
+```console
+  git config --global user.email "ENTER YOUR E-MAIL-ADDRESSE"
+```
+
+See configuration:
+```console
+  git config --list
+```
+
+### Install Vercel CLI:
+```console
+  npm i -g vercel
+```
+
+```console
+  vercel -v
+```
+
+NB. When running $ "vercel -v" I got the response "command not found" and had to use $ "npm install -g npm".
+
 ## Github
 
 If you clone this repository and setup a local development environment you can use the Vercel CLI to retrieve your environment variables using the "vercel env pull" command.
 
 N.B. If you encounter the error message: "Error! The specified token is not valid" try "vercel logout" and "vercel login".
 
-Install Vercel CLI:
-1. $ npm i -g vercel
+### Clone repository
+Clone the code repository on Github to Github directory on your local development environment.
 
-Install Git on Ubuntu
+```console
+  mkdir Github && cd Github
+```
 
-1. $ sudo apt update
-1. $ sudo apt install git
-1. $ git --version
+```console
+  git clone https//github.com/rolfmadsen/rolfmadsen.git
+```
 
-Commands for pushing code to github:
-1. $ git add . (Explanation: Stage all changes in the current directory and sub-directories)
-1. $ git commit -m "Describe the changes" (Explanation: Saves all changes to the local repository)
-1. $ git push (Explanation: Upload all changes from the local repository to the master of the remote repository)
+Install all dependencies:
+```console
+  npm install
+```
 
-NB. Remember to setup a Github Token for use as a password in the terminal under https://github.com/settings/tokens.
+### Connect your local development environment to your Vercel project
 
-## How to use GET to submit search query to browser URL
+1. Login (https://vercel.com/login) or create account (https://vercel.com/signup) on Vercel.
+1. Create a new project (https://vercel.com/new).
+1. Select "Add GitHub Org or Account".
+
+Login to Vercel from terminal:
+```console
+  vercel login
+```
+
+Link local development environment to Vercel project: 
+```console
+  vercel link
+```
+
+Run project on localhost for testing before you commit changes to Github:
+```console
+  vercel dev
+```
+NB. To enable search in the Datawell you have to add the secret token for verification of your client to the Open Platform.
+
+### Add access token for Open Platform as environment variable in Vercel
+
+1. "Plaintext" is only for use on your local development environment.
+1. "Secret" is for use on staging or production environments published on Vercel.
+
+Use the key "vercel" for both environment variables, and set the value to a valid access token from the Access platform.
+
+The access token kan be retrieved via https://openplatform.dbc.dk/v3/ under the "Tokens" section.
+
+### Commands for pushing code to github:
+
+Stage all changes in the current directory and sub-directories:
+
+Show status of working tree/directory and staging area:
+```console
+git status
+```
+
+Add or track all files from working tree/directory to staging area:
+```console
+git add .
+```
+NB. Add specific files by exchanging "." with the "file-name".
+
+See the history of changes to the repository:
+```console
+  git log
+```
+
+See the difference between working tree/direcotr and staging area:
+```console
+  git diff
+```
+
+Saves all changes to the local repository:
+```console
+  git commit -m "ENTER A DESCRIPTION OF THE CHANGE" 
+```
+
+Upload all changes from the local repository to the master of the remote repository:
+```console
+  git push
+```
+NB. When you push you will be promptet to login to Github and you can use a Github Token for use as a password in the terminal under https://github.com/settings/tokens.
+
+Get updates from remote repository:
+```console
+  git pull
+```
+## Development FAQ
+
+### How to use GET to submit search query to browser URL
 
 ```html
 <form action="/api/[PATH-TO-DIRECTORY]" method="get" accept-charset="utf-8" autocomplete="on">
@@ -51,7 +181,7 @@ NB. Remember to setup a Github Token for use as a password in the terminal under
 </form>
 ```
 
-### Python script
+#### Python script
 
 Any script placed in the /api folder is processed serverside, which includes the Python script.
 
@@ -68,9 +198,9 @@ def get_query_string():
     return searchquery
 ```
 
-## Styling with Tailwind CSS
+### Styling with Tailwind CSS
 
-### components/layout.js
+#### components/layout.js
 
 """js
 function Layout({ children }) {
@@ -80,7 +210,7 @@ function Layout({ children }) {
   export default Layout
 """
 
-### pages/_app.js
+#### pages/_app.js
 
 ```js
 import '../styles/index.scss';
@@ -90,7 +220,7 @@ function App({ Component, pageProps }) {
 export default App;
 ```
 
-### styles/index.scss
+#### styles/index.scss
 
 ```js
 @tailwind base;
@@ -133,7 +263,7 @@ body,
 }
 ```
 
-### postcss.config.js
+#### postcss.config.js
 
 ```js
 module.exports = {
@@ -144,7 +274,7 @@ module.exports = {
 };
 ```
 
-### tailwind.config.js
+#### tailwind.config.js
 
 ```js
 module.exports = {
@@ -164,7 +294,7 @@ module.exports = {
   };
 ```
 
-### Add browserlist to package.json
+#### Add browserlist to package.json
 
 ```js
 {
@@ -172,13 +302,13 @@ module.exports = {
 }
 ```
 
-### Sources
+#### Sources
 
-https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss
-https://nextjs.org/learn/basics/assets-metadata-css/layout-component
-https://nextjs.org/learn/basics/assets-metadata-css/global-styles
+1. https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss
+1. https://nextjs.org/learn/basics/assets-metadata-css/layout-component
+1. https://nextjs.org/learn/basics/assets-metadata-css/global-styles
 
-## Notes
+### Notes
 
-Consider usering PurgeCSS to removed unused styles from Tailwind CSS. 
+1. Consider usering PurgeCSS to removed unused styles from Tailwind CSS. 
 (Source: https://khanna.cc/blog/using-tailwind-ui-and-next-js-together/ - 3. Optimize for production with PurgeCSS.)
