@@ -147,6 +147,20 @@ Shift to staging branch
 ```console
   git checkout staging
 ```
+Perform the changes you wish on the staging branch.
+
+Shift to master branch
+```console
+  git checkout master
+```
+Add the changes made on the staging branch to the master branch.
+```console
+  git merge staging
+```
+Push the merged changes on the master branch to origin (Github master branch)
+```console
+  git push
+```
 
 ### Commands for pushing code to github:
 
