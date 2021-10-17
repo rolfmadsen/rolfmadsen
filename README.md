@@ -209,7 +209,7 @@ Get updates from remote repository:
 
 ## Solving conflicts
 
-Conflicts in package-lock.json can be resolved by fixing the conflict in package.json and then running:
+Conflicts in package-lock.json can sometimes be resolved by fixing the conflict in package.json and then running:
 
 ```terminal
 npm install --package-lock-only
