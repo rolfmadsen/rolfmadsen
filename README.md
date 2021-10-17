@@ -207,6 +207,13 @@ Get updates from remote repository:
   git pull
 ```
 
+## Solving conflicts
+
+Conflicts in package-lock.json can be resolved by fixing the conflict in package.json and then running:
+
+```terminal
+npm install --package-lock-only
+```
 
 ## Development FAQ
 
