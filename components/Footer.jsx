@@ -4,6 +4,11 @@ import Link from 'next/link'
 const Footer = () => (
   <footer className="fixed bottom-0 bg-white bg-opacity-75 py-5 w-full">
       <span className="inline float-left mx-10 sm:block">
+        <Link href="/opensearch/dkabm">
+          <a className="py-2 px-2 bg-white border border-black rounded text-black">Opensearch API (dkabm)</a>
+        </Link>
+      </span>
+      <span className="inline float-left mx-10 sm:block">
         <Link href="/opensearch/marcxchange">
           <a className="py-2 px-2 bg-white border border-black rounded text-black">Opensearch API (marcXchange)</a>
         </Link>

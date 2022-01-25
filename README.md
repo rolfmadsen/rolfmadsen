@@ -207,6 +207,15 @@ Get updates from remote repository:
   git pull
 ```
 
+Close staging branch
+
+NB. Checkout master branch before deleting staging branch.
+
+```console
+  git checkout master
+  git branch -d staging
+```
+
 ## Solving conflicts
 
 Conflicts in package-lock.json can sometimes be resolved by fixing the conflict in package.json and then running:

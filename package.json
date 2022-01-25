@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.4.16",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "autoprefixer": "^10.3.7",
+    "graphql": "^15.6.1",
     "next": "^11.1.2",
     "postcss": "^8.3.9",
     "react": "^17.0.2",

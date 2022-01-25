@@ -57,7 +57,8 @@ function SearchResult() {
           <button className="ml-4 bg-green-600 hover:bg-green-400 text-white rounded-full py-2 px-6 font-semibold" type="submit">Search</button>
       </form>
       {loading === "false" ? (
-          <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-5 my-5">
+          <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-4 my-4">
+            <p className="block">WARNING! This site contains experiments and early prototypes.</p>
             <p className="block">When you perform a search this page will display a JSON response from the Opensearch service in the marcXchange format.</p>
           </div>
       ) : loading === "null" ? (
