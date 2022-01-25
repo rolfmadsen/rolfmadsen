@@ -223,6 +223,23 @@ Conflicts in package-lock.json can sometimes be resolved by fixing the conflict 
 ```terminal
 npm install --package-lock-only
 ```
+## Github - Personal access token
+
+1. Open https://github.com/settings/tokens
+2. Click "Generate new token"
+3. Add token name
+4. Select scopes/permissions by clicking repo checkmark
+5. Click "Generate token"
+6. Copy the token to your preferred password manager
+7. Open your terminal and navigate to local project directory
+8. Remove old origin remote: 
+```console
+$ git remote remove origin
+```
+9. Add new origin remote: 
+```console
+$ git remote add origin https://{TOKEN}@github.com/{USERNAME}/{REPOSITORY}.git
+```
 
 ## Development FAQ
 
