@@ -27,6 +27,7 @@ I have installed Ubuntu on a laptop for my local development environment.
 ```console
   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 ```
+_Kilde: https://github.com/nodesource/distributions/blob/master/README.md#debinstall _
 
 ```console
   sudo apt -y install nodejs

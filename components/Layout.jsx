@@ -9,7 +9,6 @@ function Layout({ children }) {
       <title>Alpha FolkeBiblioteket</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-      <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       <meta charSet='UTF-8' />
     </Head>
     <body>

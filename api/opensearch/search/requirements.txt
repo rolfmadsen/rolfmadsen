@@ -1,6 +1,6 @@
-flask==1.1.1
-sanic==20.12.6
-requests==2.23.0
+flask==2.1.2
+sanic==22.3.2
+requests==2.27.1
 jyserver==0.0.5
-python-dotenv==0.13.0
-werkzeug==1.0.1
+python-dotenv==0.20.0
+werkzeug==2.1.2
