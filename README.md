@@ -25,7 +25,7 @@ I have installed Ubuntu on a laptop for my local development environment.
 
 ### Update nodejs to version 14 due to dependency on this version
 ```console
-  curl -sL https;//deb.nodesource.com/setup_14.x | sudo bash -
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 ```
 
 ```console
