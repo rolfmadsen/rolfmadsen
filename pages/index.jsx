@@ -1,6 +1,6 @@
 // pages/index.jsx
 import Layout from '../components/Layout';
-import SearchResultDkabm from '../components/SearchResultDkabm';
+import SearchResultDkabm from '../components/OpensearchMarcxchange';
 
 const Home = () => (
   <Layout>
