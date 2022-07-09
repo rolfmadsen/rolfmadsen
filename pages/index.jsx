@@ -1,11 +1,10 @@
 // pages/index.jsx
 import Layout from '../components/Layout';
-import SearchResult from '../components/SearchResult';
-//import Pagination from '../components/Pagination';
+import SearchResultDkabm from '../components/SearchResultDkabm';
 
 const Home = () => (
   <Layout>
-    <SearchResult />
+    <SearchResultDkabm />
   </Layout>
 )
 
