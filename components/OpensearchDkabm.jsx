@@ -51,9 +51,17 @@ function SearchResult() {
           setQueryString(userSearchRequest);
         }}
       >
-          <input className="flex w-11/12 border-solid border-2 border-gray-600 rounded py-3 px-3 text-gray-700 mb-1 focus:outline-none focus:shadow-outline" 
-          type="search" placeholder="Search for titles, authors or subjects ..." id="searchquery" name="searchquery" autoComplete="on" autoFocus onChange={e => setUserSearchRequest(e.target.value)} />
-          <button className="ml-4 bg-green-600 hover:bg-green-400 text-white rounded-full py-2 px-6 font-semibold" type="submit">Search</button>
+      <input
+        className="flex w-11/12 border-solid border-2 border-gray-600 rounded py-3 px-3 text-gray-700 mb-1 focus:outline-none focus:shadow-outline" 
+        type="search" 
+        placeholder="Search for titles, authors or subjects ..." 
+        id="searchquery" 
+        name="searchquery" 
+        autoComplete="on" 
+        autoFocus 
+        onChange={e => setUserSearchRequest(e.target.value)} 
+      />
+        <button className="ml-4 bg-green-600 hover:bg-green-400 text-white rounded-full py-2 px-6 font-semibold" type="submit">Search</button>
       </form>
       {loading === "false" ? (
           <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-4 my-4">
@@ -66,12 +74,16 @@ function SearchResult() {
         </div>
       ) : (
         <div>
-          <span className="px-4 pb-4 inline-block">"{queryString}" gav {SearchResult.searchResponse.result.hitCount.$} resultater!</span>
-          <pre className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
-            <code>
-              {JSON.stringify(SearchResult, null, 2)},
-            </code>
-          </pre>
+          <div>
+            <span className="px-4 pb-4 inline-block">"{queryString}" gav {SearchResult.searchResponse.result.hitCount.$} resultater!</span>
+          </div>
+          <div>
+            <pre className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
+              <code>
+                {JSON.stringify(SearchResult, null, 2)},
+              </code>
+            </pre>
+          </div>
         </div>
         )
       }
