@@ -22,8 +22,9 @@ function useOpenSearch(queryString) {
 
         );
         const json = await response.json();
-        setSearchResult(json);
-        console.log(json);
+        const jsonSearchResult = json.searchResponse.result;
+        setSearchResult(jsonSearchResult);
+        console.log(jsonSearchResult);
       } catch (error) {
         setLoading("null");
       }
@@ -75,7 +76,7 @@ function SearchResult() {
       ) : (
         <div>
           <div>
-            <span className="px-4 pb-4 inline-block">"{queryString}" gav resultater!</span>
+            <span className="px-4 pb-4 inline-block">"{queryString}" gav {SearchResult.hitCount.$} resultater!</span>
           </div>
           <div>
             <pre className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
