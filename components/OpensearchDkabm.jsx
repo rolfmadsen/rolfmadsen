@@ -75,7 +75,7 @@ function SearchResult() {
       ) : (
         <div>
           <div>
-            <span className="px-4 pb-4 inline-block">"{queryString}" gav {SearchResult.searchResponse.result.hitCount.$} resultater!</span>
+            <span className="px-4 pb-4 inline-block">"{queryString}" gav resultater!</span>
           </div>
           <div>
             <pre className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
