@@ -34,7 +34,7 @@ function useOpenPlatformSearch(queryString) {
   return [SearchResult, loading];
 }
 
-function SearchResult() {
+function OpenplatformDkabm() {
   const [userSearchRequest, setUserSearchRequest] = React.useState("");
   const [queryString, setQueryString] = React.useState("");
   const [SearchResult, loading] = useOpenPlatformSearch(queryString);
@@ -119,4 +119,4 @@ function SearchResult() {
     </div>
   );
 }
-export default SearchResult
+export default OpenplatformDkabm
