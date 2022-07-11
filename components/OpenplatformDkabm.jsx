@@ -8,7 +8,7 @@ function useOpenPlatformSearch(queryString) {
   const validCql = queryString.includes("phrase.") || queryString.includes("term.") || queryString.includes("rec.") || queryString.includes("holdingsitem.") || queryString.includes("dkcclphrase.") || queryString.includes("dkcclterm.") || queryString.includes("facet.") || queryString.includes("term.") ? queryString : simplePhrase;
 
   React.useEffect(() => {
-    async function fetchBookList() {
+    async function fetchWorkList() {
       try {
         setLoading ("true");
         const response = await fetch(
@@ -27,7 +27,7 @@ function useOpenPlatformSearch(queryString) {
     }
 
     if (queryString !== "") {
-      fetchBookList();
+      fetchWorkList();
     }
   }, [queryString]);
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-function useOpenPlatformSearch(queryString) {
+function useOpenSearch(queryString) {
   const [SearchResult, setSearchResult] = React.useState([]);
   const [loading, setLoading] = React.useState("false");
 
@@ -37,10 +37,10 @@ function useOpenPlatformSearch(queryString) {
   return [SearchResult, loading];
 }
 
-function OpensearchDkabm() {
+function SearchResult() {
   const [userSearchRequest, setUserSearchRequest] = React.useState("");
   const [queryString, setQueryString] = React.useState("");
-  const [SearchResult, loading] = useOpenPlatformSearch(queryString);
+  const [SearchResult, loading] = useOpenSearch(queryString);
 
   return (
     <div>
@@ -66,15 +66,19 @@ function OpensearchDkabm() {
         </div>
       ) : (
         <div>
+          <span className="px-4 pb-4 inline-block">"{queryString}" gav {SearchResult.searchResponse.result.hitCount.$} resultater!</span>
+          
           <pre className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
             <code>
-              {JSON.stringify(SearchResult, null, 2)}
+              {JSON.stringify(SearchResult, null, 2)},
             </code>
           </pre>
+          
+          
         </div>
         )
       }
     </div>
   );
 }
-export default OpensearchDkabm
+export default SearchResult

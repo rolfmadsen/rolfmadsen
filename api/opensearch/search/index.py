@@ -24,8 +24,9 @@ def getsearchresult(search_query, objectFormat):
         'start':'1',
         'stepValue':'10',
         'outputType':'json',
-        'objectFormat':objectFormat
-    }
+        'objectFormat':objectFormat,
+        'collectionType':'manifestation'
+      }
 
     endpoint = 'https://opensearch.addi.dk/test_5.2/?'
     
