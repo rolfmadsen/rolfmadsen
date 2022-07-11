@@ -67,7 +67,7 @@ function SearchResult() {
       ) : (
         <div>
           <span className="px-4 pb-4 inline-block">"{queryString}" gav {SearchResult.searchResponse.result.hitCount.$} resultater!</span>
-          
+         
           <pre className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
             <code>
               {JSON.stringify(SearchResult, null, 2)},
