@@ -78,13 +78,13 @@ function SearchResult() {
           <div>
             <span className="px-4 pb-4 inline-block">"{queryString}" gav {SearchResult.hitCount.$} resultater!</span>
           </div>
-          <div>
+          {/*<div>
             <pre className="border-solid border-black border-2 border-opacity-25 mx-4 my-2">
               <code>
                 {JSON.stringify(SearchResult, null, 2)},
               </code>
             </pre>
-          </div>
+      </div>*/}
         </div>
         )
       }
