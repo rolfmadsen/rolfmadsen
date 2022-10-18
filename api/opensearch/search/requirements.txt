@@ -1,5 +1,5 @@
 flask==2.1.2
-sanic==22.3.2
+sanic==22.6.1
 requests==2.27.1
 jyserver==0.0.5
 python-dotenv==0.20.0
