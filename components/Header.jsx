@@ -7,9 +7,15 @@ export default function Header() {
   return <>
     <header className="clear-both w-full">
       <div>
-          <a href ="/" onClick={() => router.reload()}>
-            <h1 className="text-4xl font-bold text-black float-left px-4" title="Go to frontpage">Alpha FolkeBiblioteket</h1>
-          </a>
+        <h1>
+          <Link href ="/" onClick={() => router.reload()}>
+            <button
+              className="text-4xl font-bold text-black float-left px-4" title="Go to frontpage"
+            >
+              Alpa FolkeBiblioteket
+            </button>
+          </Link>
+        </h1>
       </div>
     </header>
   </>

@@ -3,19 +3,34 @@ import Link from 'next/link'
 
 const Footer = () => (
   <footer className="fixed bottom-0 bg-white bg-opacity-75 py-5 w-full">
-            <span className="inline float-left mx-10 sm:block">
-        <Link href="/service/opensearchdkabm">
-          <a className="py-2 px-2 bg-white border border-black rounded text-black">Opensearch API (DKABM)</a>
+      <span className="inline float-left mx-10 sm:block">
+        <Link href="/service/opensearchdkabm" passHref>
+          <button
+            type="button"
+            className="py-2 px-2 bg-white border border-black rounded text-black cursor-pointer"
+          >
+            Opensearch API (DKABM)
+          </button>
         </Link>
       </span>
       <span className="inline float-left mx-10 sm:block">
-        <Link href="/service/openplatformdkabm">
-          <a className="py-2 px-2 bg-white border border-black rounded text-black">Openplatform API (DKABM)</a>
-        </Link>
+        <Link href="/service/openplatformdkabm" passHref>
+          <button
+            type="button"
+            className="py-2 px-2 bg-white border border-black rounded text-black cursor-pointer"
+            >
+            Openplatform API (DKABM)
+          </button>
+        </Link>  
       </span>
       <span className="inline float-left mx-10 sm:block">
-        <Link href="/service/opensearchmarcxchange">
-          <a className="py-2 px-2 bg-white border border-black rounded text-black">Opensearch API (marcXchange)</a>
+        <Link href="/service/opensearchmarcxchange" passHref>
+          <button
+            type="button"
+            className="py-2 px-2 bg-white border border-black rounded text-black cursor-pointer"
+            >
+            Opensearch API (marcXchange)
+          </button>
         </Link>
       </span>
       <span className="inline float-right mx-10 sm:block">

@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_query_string():
     query = request.args.get('searchquery')
     query_string = "'{}'".format(query)
-    objectFormat = 'marcxchange'
+    objectFormat = 'dkabm'
     
     search_response = getsearchresult(query_string, objectFormat)
     return search_response

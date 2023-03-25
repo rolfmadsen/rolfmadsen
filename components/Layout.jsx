@@ -1,22 +1,22 @@
 import React from "react";
-import Head from 'next/head'
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Head from "next/head";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Layout({ children }) {
-  return <html lang="da">
-    <Head>
-      <title>Alpha FolkeBiblioteket</title>
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-      <meta charSet='UTF-8' />
-    </Head>
-    <body>
+  return (
+    <>
+      <Head>
+        <title>Alpha FolkeBiblioteket</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta charSet="UTF-8" />
+      </Head>
       <Header />
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer />
-    </body>
-  </html>
+    </>
+  );
 }
-  
-export default Layout
+
+export default Layout;

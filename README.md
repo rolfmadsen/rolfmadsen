@@ -19,7 +19,7 @@ After committing code to Github you can se the build process under https://verce
 
 Example: https://rolfmadsen.dk/
 
-## Ready your Ubuntu
+## Ready your Ubuntu installation
 
 I have installed Ubuntu on a laptop for my local development environment.
 
@@ -248,8 +248,7 @@ $ git remote add origin https://{TOKEN}@github.com/{USERNAME}/{REPOSITORY}.git
 
 ```html
 <form action="/api/[PATH-TO-DIRECTORY]" method="get" accept-charset="utf-8" autocomplete="on">
-    <input type="search" id="searchquery" name="searchquery" placeholder="Search for a subject, creator or title ..." autofocus>
-    <input type="submit" value="Search">
+    <input type="search" id="searchquery" name="searchquery" placeholder="Search for a subject, creator or title ..." autofocus type="submit" value="Search">
 </form>
 ```
 
