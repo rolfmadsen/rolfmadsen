@@ -1,7 +1,7 @@
 {
     "settings": {
       "react": {
-        "version": "18.2"
+        "version": "18.2.0"
       }
     },
     "env": {
@@ -23,4 +23,4 @@
       "react/react-in-jsx-scope": "off",
       "no-unused-vars": "warn"
     }
-}  
+  }  
