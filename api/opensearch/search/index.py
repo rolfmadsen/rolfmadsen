@@ -22,7 +22,7 @@ def getsearchresult(search_query, objectFormat):
         'agency':'100200',
         'profile':'test',
         'start':'1',
-        'stepValue':'10',
+        'stepValue':'50',
         'outputType':'json',
         'objectFormat':objectFormat,
         'collectionType':'manifestation'
