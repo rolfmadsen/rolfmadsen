@@ -1,10 +1,10 @@
 import Layout from '../components/Layout';
-import SearchResultDkabm from '../components/OpensearchMarcxchange';
+import SearchResult from '../components/OpensearchMarcxchange';
 
 export default function Home() {
   return (
   <Layout>
-    <SearchResultDkabm />
+    <SearchResult />
   </Layout>
   )
 }
