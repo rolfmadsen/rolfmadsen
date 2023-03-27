@@ -55,7 +55,8 @@ function Opensearch() {
       {loading === false ? (
         <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-4 my-4">
           <p className="block">WARNING! This site contains experiments and early prototypes.</p>
-          <p className="block">When you perform a search this page will display a JSON response from the Opensearch service.</p>
+          <p> d</p>
+          <p className="block">When you perform a search this page will display a search result from the Opensearch test service at https://opensearch.addi.dk/test_5.2/.</p>
         </div>
       ) : loading === null ? (
         <div>
