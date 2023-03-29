@@ -70,8 +70,8 @@ function Opensearch() {
   const [pageSize, setPageSize] = React.useState(10);
   const [searchResult, loading] = useOpenPlatformSearch(queryString, currentPage, pageSize);
 
-  const hitCount = parseInt(searchResult.searchResponse?.result?.hitCount?.$);
-  const totalPages = Math.ceil(hitCount / pageSize);
+  const hitCount = parseInt(searchResult.searchResponse?.result?.hitCount?.$) || 0;
+  const totalPages = hitCount > 0 ? Math.ceil(hitCount / pageSize) : 1;  
 
   return (
     <div>
@@ -109,15 +109,15 @@ function Opensearch() {
               const language = record.language?.[1]?.$;
               const identifier = result.collection.object[0].identifier?.$;
   
-              const loanLink = `https://bibliotek.dk/linkme.php?rec.id=${encodeURIComponent(identifier)}`;
-  
+              const loanLink = `https://bibliotek.dk/da/reservation?ids=${encodeURIComponent(identifier)}&subtype_order_ids=${encodeURIComponent(identifier)}`;
+                                
               return (
                 <div key={index} className="bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg mb-4">
                   <h2 className="text-xl font-bold mb-2">{title}</h2>
                   <p className="text-md font-semibold mb-2">{creator} {date}</p>
                   <p className="text-sm font-medium mb-4">{type} ({language})</p>
                   <a href={loanLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Loan
+                    Order via Bibliotek.dk
                   </a>
                 </div>
               );

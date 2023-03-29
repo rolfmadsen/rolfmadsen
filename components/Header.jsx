@@ -12,7 +12,7 @@ export default function Header() {
             <button
               className="text-4xl font-bold text-black float-left px-4" title="Go to frontpage"
             >
-              Alpa FolkeBiblioteket
+              Alpha FolkeBiblioteket
             </button>
           </Link>
         </h1>
