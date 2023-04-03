@@ -10,9 +10,9 @@ export default function Header() {
         <h1>
           <Link href ="/" onClick={() => router.reload()}>
             <button
-              className="text-4xl font-bold text-black float-left px-4" title="Go to frontpage"
+              className="text-4xl font-bold text-black float-left px-4" title="Til forsiden"
             >
-              Alpha FolkeBiblioteket
+              Eksperimenter med den Fælles Biblioteksinfrastruktur
             </button>
           </Link>
         </h1>
