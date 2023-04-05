@@ -100,29 +100,46 @@ function Opensearch() {
       ) : (
         <div>
 <div className="mx-4 my-2">
-            {searchResult.searchResponse?.result?.searchResult?.map((result, index) => {
+{searchResult.searchResponse?.result?.searchResult?.map((result, index) => {
               const record = result.collection.object[0].record;
-              const title = record.title?.find(t => t["@type"]?.["$"] === "dkdcplus:full")?.$;
-              const creator = record.creator?.find(c => c["@type"]?.["$"] === "dkdcplus:aut")?.$
+              const title = record.title?.find((t) => t["@type"]?.["$"] === "dkdcplus:full")?.$;
+              const creator = record.creator?.find((c) => c["@type"]?.["$"] === "dkdcplus:aut")?.$;
               const creator_string = creator ? `Skrevet af ${creator} ` : "";
               const publisher = record.publisher?.[0]?.$;
-              const publisher_string = publisher ? `Udgivet af ${publisher} ` : "";
+              const publisher_string = publisher ? `${publisher} ` : "";
               const date = record.date?.[0]?.$;
-              const date_string = date ? `(${date}) ` : "";
+              const date_string = date ? `${date} ` : "";
               const type = record.type?.[0]?.$;
               const language = record.language?.[1]?.$;
               const identifier = result.collection.object[0].identifier?.$;
+              function generateInfoString(creator, publisher, date) {
+                const strings = [];
+                          
+                if (creator) {
+                  strings.push(`Skrevet af ${creator}`);
+                }
+                          
+                if (publisher) {
+                  const prefix = creator ? " - " : "Udgivet ved";
+                  strings.push(`${prefix} ${publisher}`);
+                }
+                          
+                if (date) {
+                  const prefix = creator || publisher ? " i " : "Udgivet i ";
+                  strings.push(`${prefix}${date}`);
+                }
+                          
+                return strings.join(" ");
+              }              
   
               const loanLink = `https://bibliotek.dk/da/reservation?ids=${encodeURIComponent(identifier)}&subtype_order_ids=${encodeURIComponent(identifier)}`;
                                 
               return (
                 <div key={index} className="bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg mb-4">
                   <h2 className="text-xl font-bold mb-2">{title}</h2>
-                  <p className="text-md font-semibold mb-2">{creator_string} {date_string}</p>
-                  <p className="text-md font-semibold mb-2">{publisher_string}</p>
-                  <p className="text-sm font-medium mb-4">Udlånes som {type} på {language}</p>
-                  <a href={loanLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Bestil via Bibliotek.dk
+                  <p className="text-md font-semibold mb-2">{generateInfoString(creator, publisher, date)}</p>
+                  <a href={loanLink} target="_blank" title="Bestilling sker via Bibliotek.dk" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Bestil som {type ? type.toLowerCase() : ''} på {language ? language.toLowerCase() : ''}
                   </a>
                 </div>
               );
