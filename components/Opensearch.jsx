@@ -104,11 +104,8 @@ function Opensearch() {
               const record = result.collection.object[0].record;
               const title = record.title?.find((t) => t["@type"]?.["$"] === "dkdcplus:full")?.$;
               const creator = record.creator?.find((c) => c["@type"]?.["$"] === "dkdcplus:aut")?.$;
-              const creator_string = creator ? `Skrevet af ${creator} ` : "";
               const publisher = record.publisher?.[0]?.$;
-              const publisher_string = publisher ? `${publisher} ` : "";
               const date = record.date?.[0]?.$;
-              const date_string = date ? `${date} ` : "";
               const type = record.type?.[0]?.$;
               const language = record.language?.[1]?.$;
               const identifier = result.collection.object[0].identifier?.$;
