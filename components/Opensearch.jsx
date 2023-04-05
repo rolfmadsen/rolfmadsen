@@ -89,9 +89,7 @@ function Opensearch() {
         </form>
         {loading === false ? (
           <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-4 my-4">
-          <p className="block text-center">ADVARSEL! Denne side benyttes til eksperimenter og prototyper!</p>
-          <br />
-          <p className="block text-center">Søgeresultatet viser data fra DBC's Opensearch test service https://opensearch.addi.dk/test_5.2/.</p>
+          <p className="block m-4 text-center">Søgeresultatet viser data fra DBC's Opensearch test service https://opensearch.addi.dk/test_5.2/ og skal betragtes som eksperimenter og prototyper.</p>
         </div>
       ) : loading === null ? (
         <div>
