@@ -25,6 +25,7 @@ def getsearchresult(search_query, objectFormat, start, stepValue):
         'start': start,
         'stepValue': stepValue,
         'outputType': 'json',
+        'relationData': 'full',
         'objectFormat': objectFormat,
         'collectionType': 'manifestation'
     }

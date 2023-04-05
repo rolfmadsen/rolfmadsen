@@ -99,10 +99,18 @@ function Opensearch() {
         </div>
       ) : (
         <div>
-<div className="mx-4 my-2">
-{searchResult.searchResponse?.result?.searchResult?.map((result, index) => {
+          <div className="mx-4 my-2">
+          {searchResult.searchResponse?.result?.searchResult?.map((result, index) => {
               const record = result.collection.object[0].record;
-              const title = record.title?.find((t) => t["@type"]?.["$"] === "dkdcplus:full")?.$;
+              const relations = result.collection.object[0].relations;
+              const originalTitle = record.title?.find((t) => t["@type"]?.["$"] === "dkdcplus:full")?.$;
+              let title = originalTitle;
+              if (originalTitle === "Lektørudtalelse") {
+                const relation_title = relations?.relation?.[0]?.relationObject?.object?.record?.title?.find((t) => t["@type"]?.["$"] === "dkdcplus:full")?.$;
+                title = relation_title ? `Lektørudtalelse af: "${relation_title}"` : "Lektørudtalelse";
+              } else {
+                title = originalTitle;
+              }
               const creator = record.creator?.find((c) => c["@type"]?.["$"] === "dkdcplus:aut")?.$;
               const publisher = record.publisher?.[0]?.$;
               const date = record.date?.[0]?.$;
@@ -127,10 +135,10 @@ function Opensearch() {
                 }
                           
                 return strings.join(" ");
-              }              
-  
+              }        
+              
               const loanLink = `https://bibliotek.dk/da/reservation?ids=${encodeURIComponent(identifier)}&subtype_order_ids=${encodeURIComponent(identifier)}`;
-                                
+              
               return (
                 <div key={index} className="bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg mb-4">
                   <h2 className="text-xl font-bold mb-2">{title}</h2>
