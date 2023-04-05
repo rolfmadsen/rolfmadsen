@@ -91,7 +91,7 @@ function Opensearch() {
           <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-4 my-4">
           <p className="block text-center">ADVARSEL! Denne side benyttes til eksperimenter og prototyper!</p>
           <br />
-          <p className="block text-center">Når du foretager en søgning bliver der vist resultater fra DBC's Opensearch test service https://opensearch.addi.dk/test_5.2/.</p>
+          <p className="block text-center">Søgeresultatet viser data fra DBC's Opensearch test service https://opensearch.addi.dk/test_5.2/.</p>
         </div>
       ) : loading === null ? (
         <div>

@@ -10,9 +10,9 @@ export default function Header() {
         <h1>
           <Link href ="/" onClick={() => router.reload()}>
             <button
-              className="text-4xl font-bold text-black float-left px-4" title="Til forsiden"
+              className="text-4xl text-black float-left px-4 py-4 " title="Til forsiden"
             >
-              Eksperimenter med den Fælles Biblioteksinfrastruktur
+              Eksperimenter - Den Fælles Biblioteksinfrastruktur
             </button>
           </Link>
         </h1>
