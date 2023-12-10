@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Alpha FolkeBiblioteket</title>
+        <title>Metadata & Discovery</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta charSet="UTF-8" />

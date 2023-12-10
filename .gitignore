@@ -32,3 +32,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+.vercelignore
+
+# Rust
+target/
+
+# VS COde Workspace
+rolfmadsen.code-workspace
