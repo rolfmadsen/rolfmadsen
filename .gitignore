@@ -39,3 +39,4 @@ target/
 
 # VS COde Workspace
 rolfmadsen.code-workspace
+.env*.local
