@@ -29,7 +29,7 @@ function useOpenPlatformSearch(queryString, currentPage, pageSize) {
       try {
         setLoading(true);
         const start = (currentPage - 1) * pageSize; // calculate the start value
-        const response = await fetch(`http://localhost:3000/api/search?q=${queryString}&offset=${start}&limit=${pageSize}&token=${token}`, {
+        const response = await fetch(`/api/search?q=${queryString}&offset=${start}&limit=${pageSize}&token=${token}`, {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
