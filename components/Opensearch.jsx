@@ -4,10 +4,6 @@ import { useRouter } from 'next/router';
 function useOpenPlatformSearch(queryString, currentPage, pageSize) {
   const [searchResult, setSearchResult] = React.useState({});
   const [loading, setLoading] = React.useState(false);
-
-  // Retrieve the token from local storage
-  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
-
   const prevQueryString = React.useRef(queryString);
   const prevCurrentPage = React.useRef(currentPage);
   const prevPageSize = React.useRef(pageSize);
@@ -29,7 +25,7 @@ function useOpenPlatformSearch(queryString, currentPage, pageSize) {
       try {
         setLoading(true);
         const start = (currentPage - 1) * pageSize; // calculate the start value
-        const response = await fetch(`/api/search?q=${queryString}&offset=${start}&limit=${pageSize}&token=${token}`, {
+        const response = await fetch(`/api/search?q=${queryString}&offset=${start}&limit=${pageSize}`, {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
