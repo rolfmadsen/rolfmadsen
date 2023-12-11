@@ -199,8 +199,8 @@ struct TokenResponse {
 }
 
 async fn fetch_access_token() -> Result<String, Box<dyn Error + Send + Sync>> {
-    let client_id = env::var("FBI_API_CLIENT_ID").expect("FBI_API_CLIENT_ID not set");
-    let client_secret = env::var("FBI_API_CLIENT_PASSWORD").expect("FBI_API_CLIENT_PASSWORD not set");
+    let client_id = env::var("NEXT_PUBLIC_FBI_API_CLIENT_ID").expect("FBI_API_CLIENT_ID not set");
+    let client_secret = env::var("NEXT_PUBLIC_FBI_API_CLIENT_PASSWORD").expect("FBI_API_CLIENT_PASSWORD not set");
 
     let params = [("grant_type", "password"), ("username", "@"), ("password", "@")];
     let client = reqwest::Client::new();
