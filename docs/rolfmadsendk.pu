@@ -1,0 +1,102 @@
+'PlantUML diagram generated from the application files by ChatGPT
+
+@startuml
+skinparam classAttributeIconSize 0
+
+class MyApp {
+    --
+    + render()
+}
+
+class PiwikProProvider {
+    + containerId: string
+    + containerUrl: string
+    --
+    + render()
+}
+
+class IndexPage {
+    --
+    + render()
+}
+
+class SearchPage {
+    --
+    + render()
+}
+
+class Opensearch {
+    + userSearchRequest: string
+    + queryString: string
+    + currentPage: int
+    + pageSize: int
+    + hasSearched: bool
+    --
+    + useEffect()
+    + handleSubmit()
+    + render()
+}
+
+class useOpenPlatformSearch {
+    + queryString: string
+    + currentPage: int
+    + pageSize: int
+    --
+    + useEffect()
+    + fetchBookList()
+    + returns [searchResult, loading]
+}
+
+class Pagination {
+    + currentPage: int
+    + totalPages: int
+    + onPageChange(page: int)
+    --
+    + render()
+}
+
+class Header {
+    --
+    + render()
+}
+
+class Footer {
+    --
+    + render()
+}
+
+class Layout {
+    --
+    + render()
+}
+
+class SearchAPI {
+    + main()
+    + index_handler(request: Request): Response
+    + access_token(): String
+    --
+    - fetch_access_token()
+    - Data Models (Data, Search, Work, etc.)
+}
+
+MyApp --> PiwikProProvider : uses
+MyApp --> Component : renders
+
+IndexPage --> Layout : uses
+IndexPage --> Opensearch : uses
+
+SearchPage --> Layout : uses
+SearchPage --> Opensearch : uses
+
+Layout --> Header : uses
+Layout --> Footer : uses
+Layout *-- Opensearch : contains
+
+Opensearch --> useOpenPlatformSearch : uses
+Opensearch --> Pagination : renders
+Opensearch --> Router : uses
+Opensearch --> SearchAPI : fetches data from
+
+SearchAPI --> ExternalAPI : queries ("https://fbi-api.dbc.dk/bibdk21/graphql")
+
+@enduml
