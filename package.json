@@ -8,25 +8,25 @@
     "start": "next start"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.8",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@apollo/client": "^3.11.8",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@piwikpro/next-piwik-pro": "2.0.0",
-    "eslint-config-next": "^14.0.4",
-    "graphql": "^16.8.1",
-    "next": "^14.1.1",
+    "@piwikpro/next-piwik-pro": "^3.1.1",
+    "eslint-config-next": "^14.2.13",
+    "graphql": "^16.9.0",
+    "next": "^14.2.13",
     "next-transpile-modules": "10.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "set-value": "^4.1.0",
     "upgrade": "^1.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.55.0",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6"
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
   },
   "engines": {
     "node": ">=18"
