@@ -3,14 +3,19 @@ import '../styles/globals.css'
 import PiwikProProvider from '@piwikpro/next-piwik-pro'
 
 export default function MyApp({ Component, pageProps }) {
+  const isBrowser = typeof window !== 'undefined';
+
   return (
     <>
-      <PiwikProProvider
-        containerId={process.env.NEXT_PUBLIC_CONTAINER_ID}
-        containerUrl={process.env.NEXT_PUBLIC_CONTAINER_URL} 
-      >
-        <Component {...pageProps} />
-      </PiwikProProvider>
+      {isBrowser && (
+        <PiwikProProvider
+          containerUrl={process.env.NEXT_PUBLIC_CONTAINER_URL} 
+          containerId={process.env.NEXT_PUBLIC_CONTAINER_ID}
+        >
+          <Component {...pageProps} />
+        </PiwikProProvider>
+      )}
+      {!isBrowser && <Component {...pageProps} />}
     </>
   )
 }
