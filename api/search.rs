@@ -97,12 +97,15 @@ pub struct Translation {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
-    dotenv().ok(); // Indlæser miljøvariabler fra .env filen
-
+    #[cfg(debug_assertions)]
+    {
+        dotenv().ok(); // Load .env only in development
+    }
     run(index_handler).await?;
     Ok(())
 }
 
+    
 /*
 async fn access_token() -> Result<String, Box<dyn Error + Send + Sync>> {
     match env::var("ACCESS_TOKEN_ENVIRONMENT_VARIABLE") {
