@@ -11,9 +11,10 @@
     "@apollo/client": "^3.8.8",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@piwikpro/next-piwik-pro": "^3.1.1",
     "eslint-config-next": "^14.0.4",
+    "flat-cache": "^6.0.0",
     "graphql": "^16.8.1",
     "next": "^14.2.13",
     "next-transpile-modules": "10.0.1",
@@ -24,7 +25,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.55.0",
+    "eslint": "^8.57.1",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6"
   },
