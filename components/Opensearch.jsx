@@ -240,11 +240,14 @@ function Opensearch() {
             </p>
           </div>
         )}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={page => setCurrentPage(page)}
-        />
+        {/* Conditionally render pagination when there are search results */}
+        {searchResult.search?.works?.length > 0 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={page => setCurrentPage(page)}
+          />
+        )}
       </div>
     </div>
   );
