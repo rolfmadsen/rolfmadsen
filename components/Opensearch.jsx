@@ -139,7 +139,7 @@ function Opensearch() {
     <div>
       <div className>
         <form
-          className="flex w-full px-6 mt-12 mb-12"
+          className="flex flex-col sm:flex-row w-full px-6 mt-6 mb-6" // Add mb-6 for spacing below the form
           onSubmit={e => {
             e.preventDefault();
             setQueryString(userSearchRequest);
@@ -153,7 +153,7 @@ function Opensearch() {
           }}
         >
           <input
-            className="flex-grow border-solid border-2 border-gray-400 rounded-lg px-4 text-gray-800 focus:outline-none focus:shadow-outline"
+            className="w-full sm:w-11/12 border-solid border-2 border-gray-400 rounded-lg py-3 px-4 text-gray-800 mb-2 sm:mb-0 sm:mr-4 focus:outline-none focus:shadow-outline"
             type="search"
             placeholder="Søg efter titel, forfatter eller emne ..."
             id="search"
@@ -164,7 +164,7 @@ function Opensearch() {
             value={userSearchRequest}
             onChange={e => setUserSearchRequest(e.target.value)}
           />
-          <button className="ml-4 bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-lg py-2 px-6 transition-colors duration-300 ease-in-out">
+          <button className="w-full sm:w-auto bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-lg py-2 px-6 transition-colors duration-300 ease-in-out">
             Søg
           </button>
         </form>
