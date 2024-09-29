@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => (
-  <footer className="bg-gray-900 text-white py-6 mt-10">
+  <footer className="bg-gray-200 text-white py-6 mt-10">
     <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
       <div className="text-center sm:text-left text-teal-500 mb-4 sm:mb-0">
         <p className="text-sm">© Rolf Madsen 2023</p>

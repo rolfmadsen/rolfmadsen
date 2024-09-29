@@ -228,21 +228,15 @@ function Opensearch() {
           </div>
         ) : (
           <div className="block w-11/12 flex-auto py-3 px-3 bg-white border-2 border-gray-300 p-6 rounded-md tracking-tight shadow-lg my-10 mx-10 space-y-4">
-            <h2 className="text-2xl font-semi-bold mb-2">Velkommen til min hjemmeside!</h2>
-            <p className="text-md font-normal mb-2">
-              Mit navn er Rolf Madsen, og jeg arbejder på Københavns Universitet som IT arkitekt.
+            <h2 className="text-3xl font-semi-bold mb-4 text-gray-800">Velkommen til Metadata & Discovery</h2>
+            <p className="text-lg font-normal text-gray-700">
+              Jeg hedder Rolf Madsen og arbejder som IT-arkitekt ved Københavns Universitet. Denne platform er udviklet som en demonstration af mine kompetencer inden for systemintegration og webudvikling.
             </p>
-            <p className="text-md font-normal mb-2">
-              Formålet med siden for at dele de eksperimenter jeg laver særligt i NextJS, TypeScript, Rust og Python.
+            <p className="text-lg font-normal text-gray-700">
+              Platformen er baseret på en Rust-baseret integration til den danske Fælles Biblioteksinfrastruktur (FBI) via et GraphQL API, hvilket gør det muligt at fremsøge materialer og bestille dem fra danske biblioteker via <a href="https://bibliotek.dk" className="font-medium text-teal-600 underline dark:text-teal-500 hover:no-underline">Bibliotek.dk</a>.
             </p>
-            <p className="text-md font-normal mb-2">
-              Hvis du er interesseret i at vide mere om mig eller mit arbejde, er du velkommen til at tjekke mine profiler på <a href="https://www.linkedin.com/in/rolfmadsen/?originalSubdomain=dk" className="font-medium text-teal-500 underline dark:text-teal-500 hover:no-underline">LinkedIn</a> og <a href="https://github.com/rolfmadsen/rolfmadsen/" className="font-medium text-teal-500 underline dark:text-blue-500 hover:no-underline">GitHub</a>.
-            </p>
-            <p className="text-md font-normal mb-2">
-              Du er altid velkommen til at kontakte mig, hvis du er nysgerrig og har lyst til at vide mere.
-            </p>
-            <p className="text-md font-normal mb-2">
-              Tak fordi du besøger min side.
+            <p className="text-lg font-normal text-gray-700">
+              Hvis du er interesseret i mit arbejde, er du velkommen til at følge mig på <a href="https://www.linkedin.com/in/rolfmadsen/" className="font-medium text-teal-600 underline dark:text-teal-500 hover:no-underline">LinkedIn</a> eller <a href="https://github.com/rolfmadsen/" className="font-medium text-teal-600 underline dark:text-teal-500 hover:no-underline">GitHub</a>.
             </p>
           </div>
         )}
