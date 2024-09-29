@@ -97,8 +97,10 @@ pub struct Translation {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
-    dotenv().ok(); // Indlæser miljøvariabler fra .env filen
-
+    #[cfg(debug_assertions)]
+    {
+        dotenv().ok(); // Only load .env in development
+    }
     run(index_handler).await?;
     Ok(())
 }
