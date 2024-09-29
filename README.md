@@ -250,7 +250,6 @@ NEXT_PUBLIC_CONTAINER_ID
 NEXT_PUBLIC_CONTAINER_URL
 
 
-
 ### Styling with Tailwind CSS
 
 #### components/layout.js
