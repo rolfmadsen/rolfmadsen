@@ -7,3 +7,10 @@
 body {
   @apply text-gray-900 bg-gray-100 font-sans;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
