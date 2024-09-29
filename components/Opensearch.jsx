@@ -205,7 +205,7 @@ function Opensearch() {
 
               return (
                 <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
-                  <h2 className="text-xl font-semibold mb-2 text-gray-800">{title}</h2>
+                  <h2 className="text-xl font-normal mb-2 text-gray-800">{title}</h2>
                   <p className="text-md text-gray-600 mb-4">{generateInfoString(creator, date)}</p>
                   <a
                     href={loanLink}
@@ -221,15 +221,31 @@ function Opensearch() {
             })}
           </div>
         ) : hasSearched ? (
-          <div className="mt-10 text-center">
-            <p className="text-lg font-semibold text-gray-600">Vi fandt desværre ikke nogen materialer der matchede din søgning ...</p>
+          <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-4 my-4">
+            <p className="block font-bold m-4 text-xl text-center">
+              Vi fandt desværre ikke nogen materialer der matchede din søgning ...
+            </p>
           </div>
         ) : (
-          <div className="block relative border-solid border-2 border-gray-600 clear-both py-2 px-2 mx-4 my-4">
-            <p className="block font-bold m-4 text-xl text-center">Vi fandt desværre ikke nogen materialer der matchede din søgning ...</p>
+          <div className="block w-11/12 flex-auto py-3 px-3 bg-white border-2 border-gray-300 p-6 rounded-md tracking-tight shadow-lg my-10 mx-10 space-y-4">
+            <h2 className="text-2xl font-semi-bold mb-2">Velkommen til min hjemmeside!</h2>
+            <p className="text-md font-normal mb-2">
+              Mit navn er Rolf Madsen, og jeg arbejder på Københavns Universitet som IT arkitekt.
+            </p>
+            <p className="text-md font-normal mb-2">
+              Formålet med siden for at dele de eksperimenter jeg laver særligt i NextJS, TypeScript, Rust og Python.
+            </p>
+            <p className="text-md font-normal mb-2">
+              Hvis du er interesseret i at vide mere om mig eller mit arbejde, er du velkommen til at tjekke mine profiler på <a href="https://www.linkedin.com/in/rolfmadsen/?originalSubdomain=dk" className="font-medium text-teal-500 underline dark:text-teal-500 hover:no-underline">LinkedIn</a> og <a href="https://github.com/rolfmadsen/rolfmadsen/" className="font-medium text-teal-500 underline dark:text-blue-500 hover:no-underline">GitHub</a>.
+            </p>
+            <p className="text-md font-normal mb-2">
+              Du er altid velkommen til at kontakte mig, hvis du er nysgerrig og har lyst til at vide mere.
+            </p>
+            <p className="text-md font-normal mb-2">
+              Tak fordi du besøger min side.
+            </p>
           </div>
         )}
-
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}

@@ -7,6 +7,7 @@ use vercel_runtime::{run, Body, Request, Response, StatusCode};
 use serde_qs::from_str as from_qs;
 use reqwest;
 use std::env;
+#[cfg(debug_assertions)]
 use dotenv::dotenv;
 
 #[derive(Deserialize)]
