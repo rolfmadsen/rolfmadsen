@@ -1,11 +1,20 @@
 import React from "react";
 
 const Footer = () => (
-  <footer className="fixed bottom-0 bg-white bg-opacity-75 py-5 w-full">
-      <span className="inline float-right mx-10 sm:block">
-        <span className="ml-2 py-2 px-2 bg-black text-white rounded-full"><a href="https://dk.linkedin.com/in/rolfmadsen/">LinkedIn - Rolf Madsen 2023</a></span>
-        <span className="ml-2 py-2 px-2 bg-black text-white rounded-full"><a href="https://github.com/rolfmadsen//rolfmadsen/">Github © Rolf Madsen 2023</a></span>
-      </span>
+  <footer className="bg-gray-900 text-white py-6 mt-10">
+    <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+      <div className="text-center sm:text-left text-teal-500 mb-4 sm:mb-0">
+        <p className="text-sm">© Rolf Madsen 2023</p>
+      </div>
+      <div className="space-x-4">
+        <a href="https://dk.linkedin.com/in/rolfmadsen/" target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:text-teal-500 transition-colors duration-300">
+          LinkedIn
+        </a>
+        <a href="https://github.com/rolfmadsen/rolfmadsen/" target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:text-teal-500 transition-colors duration-300">
+          GitHub
+        </a>
+      </div>
+    </div>
   </footer>
 );
 

@@ -13,7 +13,9 @@ function Layout({ children }) {
         <meta charSet="UTF-8" />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main className="pt-16 sm:pt-0">
+        {children}
+      </main>
       <Footer />
     </>
   );

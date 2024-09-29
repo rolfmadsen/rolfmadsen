@@ -117,7 +117,7 @@ async fn access_token() -> Result<String, Box<dyn Error + Send + Sync>> {
 async fn index_handler(request: Request) -> Result<Response<Body>, Box<dyn Error + Send + Sync>> {
     let query: SearchQuery = from_qs(request.uri().query().unwrap_or("")).unwrap();
     let offset = query.offset.unwrap_or(0); // default to 0 if not provided
-    let limit: usize = query.limit.unwrap_or(10); // default to 10 if not provided
+    let limit: usize = query.limit.unwrap_or(12); // default to 12 if not provided
     let query = format!(r#"
     query search {{
         search(

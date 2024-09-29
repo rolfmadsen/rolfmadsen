@@ -1,4 +1,9 @@
-/* ./styles/globals.css */
+/* Add custom styles or overrides */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply text-gray-900 bg-gray-100 font-sans;
+}
