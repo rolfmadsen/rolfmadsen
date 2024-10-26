@@ -122,7 +122,7 @@ function WorkDetail() {
                 {workData.workTypes?.[0] === 'LITERATURE' && (
                   <FaBook className="text-6xl text-gray-500"  title="Litteratur"/>
                 )}
-                {workData.workTypes?.[0] === 'FILM' && (
+                {workData.workTypes?.[0] === 'MOVIE' && (
                   <FaFilm className="text-6xl text-gray-500"  title="Film"/>
                 )}
                 {workData.workTypes?.[0] === 'MUSIC' && (
@@ -134,7 +134,7 @@ function WorkDetail() {
                 {workData.workTypes?.[0] === 'ARTICLE' && (
                   <FaFileAlt className="text-6xl text-gray-500"  title="Artikler"/>
                 )}
-                {!['LITERATURE', 'FILM', 'MUSIC', 'GAME', 'ARTICLE'].includes(workData.workTypes?.[0]) && (
+                {!['LITERATURE', 'MOVIE', 'MUSIC', 'GAME', 'ARTICLE'].includes(workData.workTypes?.[0]) && (
                   <FaFileAlt className="text-6xl text-gray-500" /> // Default icon
                 )}
               </div>    
