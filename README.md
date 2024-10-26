@@ -10,6 +10,10 @@ The discovery user interface is based on the [Danish Library Infrastructure Plat
 
 ## Releasenotes
 
+### October 2024
+- Display detailed information about works, including titles, authors, abstract, publication dates, material types, subjects, and more.
+- The page now dynamically fetches work details using the new api/work endpoint powered Rust matching the api/search endpoint.
+
 ### December 2023
 
 - Rust backend with integration to FBI-API

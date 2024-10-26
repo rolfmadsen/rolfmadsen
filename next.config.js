@@ -1,3 +1,5 @@
+// next.config.js
+
 const withTM = require('next-transpile-modules')(['@piwikpro/next-piwik-pro']);
 
 module.exports = withTM({
