@@ -7,4 +7,5 @@ module.exports = withTM({
     NEXT_PUBLIC_vercel: process.env.vercel,
   },
   reactStrictMode: true,
+  devIndicators: false
 });

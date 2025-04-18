@@ -3,32 +3,33 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.8",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@fullhuman/postcss-purgecss": "^6.0.0",
-    "@piwikpro/next-piwik-pro": "^3.1.1",
-    "eslint-config-next": "^14.0.4",
-    "flat-cache": "^6.0.0",
-    "graphql": "^16.8.1",
-    "next": "^14.2.13",
+    "@apollo/client": "^3.13.8",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@piwikpro/next-piwik-pro": "^3.4.0",
+    "eslint-config-next": "^15.3.1",
+    "flat-cache": "^6.1.8",
+    "graphql": "^16.10.0",
+    "next": "^15.3.1",
     "next-transpile-modules": "10.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "set-value": "^4.1.0",
     "upgrade": "^1.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.57.1",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6"
+    "@tailwindcss/postcss": "^4.1.4",
+    "eslint": "^9.24.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
   },
   "engines": {
     "node": "20.x"

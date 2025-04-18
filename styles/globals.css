@@ -1,16 +1,11 @@
-/* Add custom styles or overrides */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles/globals.css  ─────────────────────────────────────────── */
 
-/* Custom styles */
-body {
-  @apply text-gray-900 bg-gray-100 font-sans;
-}
+@import "tailwindcss";
 
-/* Styles/global.css */
-
-html, body, #__next {
+/* plain CSS */
+html,
+body,
+#__next {
   height: 100%;
   margin: 0;
   padding: 0;
