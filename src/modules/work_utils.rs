@@ -317,7 +317,7 @@ pub async fn work_handler(request: Request) -> Result<Response<Body>, Error> {
     let response_text = response.text().await?;
 
     // Print the response body for debugging
-    //println!("Remove // in work_utils.rs to display work response JSON");
+    println!("Remove // in work_utils.rs to display work response JSON");
     println!("WorkResponse Body: {}", response_text);
 
     // Check if the response is successful
